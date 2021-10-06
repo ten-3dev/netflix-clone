@@ -25,14 +25,14 @@ const UserItem = (props) => {
     return(
         <ItemBox>
             {props.type !== 'add' ? <>
-            <Item onPress={() => props.navigation.navigate("Home")}>
+            <Item onPress={() => props.navigation.navigate('Home', { img: props.img })}>
                 <Image source={props.img} style={{width: '100%', height: '100%', borderRadius: 5}} resizeMode="contain"></Image>
             </Item>
             <ItemText>{props.name}</ItemText>
             </>
             :
             <>
-            <Item onPress={() => alert('asdf')}>
+            <Item onPress={() => alert('추가')}>
                 <Image source={Add} style={{width: '100%', height: '100%', borderRadius: 5}} resizeMode="contain"></Image>
             </Item>
             <ItemText>프로필 추가</ItemText>

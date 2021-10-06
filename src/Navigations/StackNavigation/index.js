@@ -14,7 +14,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 const Stack = createStackNavigator();
 
 
-const StackNavigation = () => {
+const StackNavigation = (props) => {
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName={'Main'}>
