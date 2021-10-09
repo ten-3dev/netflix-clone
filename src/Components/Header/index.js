@@ -2,13 +2,13 @@ import React, { Fragment } from "react";
 import {View, Text, Image, TouchableOpacity } from "react-native";
 import styled from 'styled-components';
 import { Glasses, LOGO_2 } from "../../Assets";
+import AnimatedColorView from 'react-native-animated-colors';
 
 const Header = (props) => {
 
     const Background = styled.View`
         width: 100%;
         height: 60px;
-        background-color: rgba(0,0,0,0.5);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -36,7 +36,12 @@ const Header = (props) => {
         flex-direction: row;
     `;
     return(
-        <>
+    <AnimatedColorView
+        activeIndex={props.bgColor}
+        colors={['"rgba(0,0,0,0.0)"', '"rgba(0,0,0,0.5)"']}
+        duration={1000}
+        loop={false}
+    >
         <Background>
             <Logo source={LOGO_2}/>
             <SubBox>
@@ -48,7 +53,7 @@ const Header = (props) => {
                 </TouchableOpacity>
             </SubBox>
         </Background>
-        </>
+    </AnimatedColorView>
     )
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { SafeAreaView, Platform, View, StatusBar, Text, Image, Dimensions, TouchableOpacity } from "react-native";
+import { SafeAreaView, Platform, View, StatusBar, Text, Image, Dimensions, TouchableOpacity, Button } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import StickyHeaderFooterScrollView from 'react-native-sticky-header-footer-scroll-view';
 import LinearGradient from 'react-native-linear-gradient';
 import styled from "styled-components";
 import { Add, Info, Play, Post1 } from "../../Assets";
+import AnimatedColorView from 'react-native-animated-colors';
 
 import Header from '../../Components/Header/index';
 
@@ -47,7 +47,7 @@ const Item = styled.TouchableOpacity`
         <Title>{props.title}</Title>
       </ListTitle>
       <ItemBox>
-        <ScrollView horizontal={true}>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
           <Item/>
           <Item/>
           <Item/>
@@ -63,6 +63,8 @@ const Item = styled.TouchableOpacity`
 
 
 const HomePage = ({route}) => {
+
+  const [activeIndex, setindex] = useState(0);
   
   const MainPost = styled(LinearGradient)`
     width: 100%;
@@ -116,11 +118,11 @@ const HomePage = ({route}) => {
   `;
   const PlayText = styled.Text`
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
   `;
   const Channel = styled.View`
-    background-color: 'rgba(0,0,0,0.5)';
+    // background-color: 'rgba(0,0,0,0.5)';
     width: 100%;
     height: 40px;
     display: flex;
@@ -150,10 +152,27 @@ const HomePage = ({route}) => {
 
   const Lists = titleArr.map((title, key) => (<List key={key} title={title}></List>));
 
+  const TransparentColor = (e) => {
+    if(e.nativeEvent.contentOffset.y < 1){
+      setindex(0);
+    }else{
+      setindex(1);
+    }
+  }
+
   return(
     <SafeAreaView style={{backgroundColor:"black", flex: 1}}>
-      <ScrollView stickyHeaderIndices={[1]} onScroll={handleScroll}>
-        <Header img={route.params.img}/>
+      <ScrollView 
+        stickyHeaderIndices={[1]} 
+        showsVerticalScrollIndicator={false}
+        onScroll={(e) => TransparentColor(e)}
+        >
+        <Header img={route.params.img} bgColor={activeIndex}/>
+        <AnimatedColorView
+        activeIndex={activeIndex}
+        colors={['"rgba(0,0,0,0.0)"', '"rgba(0,0,0,0.5)"']}
+        duration={1000}
+        loop={false}>
         <Channel>
             <TouchableOpacity>
                 <ChannelText>TV 프로그램</ChannelText>
@@ -165,6 +184,7 @@ const HomePage = ({route}) => {
                 <ChannelText>카테고리 ▾</ChannelText>
             </TouchableOpacity>
         </Channel>
+        </AnimatedColorView>
         <MainPost colors={['transparent', 'transparent', '#000']}>
           <PostImg source={Post1} resizeMode='contain'/>
         </MainPost>
