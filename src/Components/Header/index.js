@@ -9,7 +9,7 @@ const Header = (props) => {
         width: 100%;
         height: 60px;
         background-color: rgba(0,0,0,0.5);
-        display: ${props.dis ? 'flex' : 'none'}
+        display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
@@ -35,20 +35,6 @@ const Header = (props) => {
         display: flex;
         flex-direction: row;
     `;
-    const Channel = styled.View`
-        background-color: ${props.op ? 'rgba(0,0,0,0.0)' : 'rgba(0,0,0,0.5)'};
-        width: 100%;
-        height: 40px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-        z-index: 1;
-    `;
-    const ChannelText = styled.Text`
-        color: white;
-        font-size: 22px;
-    `;
     return(
         <>
         <Background>
@@ -62,17 +48,6 @@ const Header = (props) => {
                 </TouchableOpacity>
             </SubBox>
         </Background>
-        <Channel>
-            <TouchableOpacity>
-                <ChannelText>TV 프로그램</ChannelText>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <ChannelText>영화</ChannelText>
-            </TouchableOpacity>
-            <TouchableOpacity>
-                <ChannelText>카테고리 ▾</ChannelText>
-            </TouchableOpacity>
-        </Channel>
         </>
     )
 }

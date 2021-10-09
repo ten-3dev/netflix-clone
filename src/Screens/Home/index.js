@@ -63,12 +63,7 @@ const Item = styled.TouchableOpacity`
 
 
 const HomePage = ({route}) => {
-  const [check, setCheck] = useState(0);
-
-  const checkNum = (num) => {
-    // console.log(num);
-  }
-
+  
   const MainPost = styled(LinearGradient)`
     width: 100%;
     height: 650px;
@@ -124,6 +119,20 @@ const HomePage = ({route}) => {
     font-size: 16px;
     font-weight: bold;
   `;
+  const Channel = styled.View`
+    background-color: 'rgba(0,0,0,0.5)';
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+  `;
+  const ChannelText = styled.Text`
+    color: white;
+    font-size: 22px;
+  `;
 
   const titleArr = [
     '넷플릭스 인기 콘텐츠', 
@@ -140,18 +149,22 @@ const HomePage = ({route}) => {
   ]
 
   const Lists = titleArr.map((title, key) => (<List key={key} title={title}></List>));
-  
-  const CheckFunc = (num) => {
-    if(num <= 2){
-      return setCheck(1);
-    }
-    return setCheck(0);
-  }
 
   return(
     <SafeAreaView style={{backgroundColor:"black", flex: 1}}>
-      <ScrollView onScroll={(e) => {CheckFunc(e.nativeEvent.contentOffset.y)}}>
-        <Header img={route.params.img} dis={check} op={check}/>
+      <ScrollView stickyHeaderIndices={[1]} onScroll={handleScroll}>
+        <Header img={route.params.img}/>
+        <Channel>
+            <TouchableOpacity>
+                <ChannelText>TV 프로그램</ChannelText>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <ChannelText>영화</ChannelText>
+            </TouchableOpacity>
+            <TouchableOpacity>
+                <ChannelText>카테고리 ▾</ChannelText>
+            </TouchableOpacity>
+        </Channel>
         <MainPost colors={['transparent', 'transparent', '#000']}>
           <PostImg source={Post1} resizeMode='contain'/>
         </MainPost>
