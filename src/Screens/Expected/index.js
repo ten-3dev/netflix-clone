@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, SafeAreaView} from 'react-native';
+import { HeaderExpected } from '../../Components/Header/index';
 
-const ExpectedPage = () => {
+const ExpectedPage = ({route}) => {
   return(
-    <View>
-      <Text>Expected</Text>
-    </View>
+    <SafeAreaView style={{backgroundColor: 'black', flex: 1}}>
+      <HeaderExpected img={route.params.img}/>
+
+    </SafeAreaView>
   )
 }
 

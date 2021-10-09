@@ -37,6 +37,7 @@ const HomeNavigation = ({route}) => {
         
       />
       <Tab.Screen 
+        initialParams={{img: route.params.img}}
         name="ExpectedPage" 
         component={ExpectedPage} 
         options={{ tabBarLabelStyle: {fontSize: 12}, tabBarShowLabel: false, tabBarIcon: ({focused}) => {

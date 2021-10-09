@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { Image } from 'react-native';
 import styled from 'styled-components';
 import { StatusBar } from 'react-native';
 import { Add, Profile_img_0, Profile_img_1, Profile_img_2 } from '../../Assets';
@@ -9,13 +9,17 @@ StatusBar.setBackgroundColor("#000");
 const UserItem = (props) => {
     const ItemBox = styled.View`
         width: 110px;
-        height: 125px;
+        height: 135px;
         margin-top: 30px;
     `;
     const Item = styled.TouchableOpacity`
         width: 100%;
         height: 110px;
         border-radius: 5px;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 8px;
     `;
     const ItemText = styled.Text`
         color: white;
@@ -33,7 +37,7 @@ const UserItem = (props) => {
             :
             <>
             <Item onPress={() => alert('추가')}>
-                <Image source={Add} style={{width: '100%', height: '100%', borderRadius: 5}} resizeMode="contain"></Image>
+                <Image source={Add} style={{width: '70%', height: '70%', borderRadius: 5}} resizeMode="contain"></Image>
             </Item>
             <ItemText>프로필 추가</ItemText>
             </>
@@ -43,16 +47,17 @@ const UserItem = (props) => {
 }
 
 const Main = ({navigation}) => {
-    const Background = styled.View`
+    const Backgrounds = styled.View`
         width: 100%;
         height: 100%;
         background-color: #000;
         align-items: center;
+        flex: 1;
     `;
     const TextBox = styled.View`
         width: 100%;
         height: 34px;
-        margin-top: 100px;
+        margin-top: 90px;
     `;
     const Label = styled.Text`
         color: white;
@@ -69,7 +74,7 @@ const Main = ({navigation}) => {
         justify-content: space-evenly;
     `;
   return(
-      <Background>
+      <Backgrounds>
         <TextBox>
             <Label>넷플릭스를 시청할 프로필을 선택하세요.</Label>
         </TextBox>
@@ -79,7 +84,7 @@ const Main = ({navigation}) => {
             <UserItem name="김민재3" img={Profile_img_2} navigation={navigation} />
             <UserItem name="김민재3" img={Profile_img_2} type="add" />
         </UserBox>
-      </Background>
+      </Backgrounds>
   )
 }
 

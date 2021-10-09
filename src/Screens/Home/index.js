@@ -1,66 +1,12 @@
 import React, { useState } from "react";
-import { SafeAreaView, Platform, View, StatusBar, Text, Image, Dimensions, TouchableOpacity, Button } from "react-native";
+import { SafeAreaView, Image, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import LinearGradient from 'react-native-linear-gradient';
 import styled from "styled-components";
 import { Add, Info, Play, Post1 } from "../../Assets";
 import AnimatedColorView from 'react-native-animated-colors';
-
-import Header from '../../Components/Header/index';
-
-const List = (props) => {
-
-  const ListBox = styled.View`
-  width: 100%;
-  height: 230px;
-  margin-top: 20px;
-`;
-const ListTitle = styled.View`
-  width: 100%;
-  height: 50px;
-  padding-left: 10px;
-`;
-const Title = styled.Text`
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
-  align-items: center;
-`;
-const ItemBox = styled.View`
-  width: 100%;
-  height: 170px;
-  display: flex;
-  flex-direction: row;
-`;
-const Item = styled.TouchableOpacity`
-  width: 125px;
-  height: 170px;
-  background-color: gray;
-  border-radius: 5px;
-  margin-right: 4px;
-  margin-left: 4px;
-`;
-
-  return(
-    <ListBox>
-      <ListTitle>
-        <Title>{props.title}</Title>
-      </ListTitle>
-      <ItemBox>
-        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-          <Item/>
-        </ScrollView>
-      </ItemBox>
-    </ListBox>
-  )
-}
-
+import { HeaderHome } from '../../Components/Header/index';
+import List from "../../Components/HomeList";
 
 const HomePage = ({route}) => {
 
@@ -167,7 +113,7 @@ const HomePage = ({route}) => {
         showsVerticalScrollIndicator={false}
         onScroll={(e) => TransparentColor(e)}
         >
-        <Header img={route.params.img} bgColor={activeIndex}/>
+        <HeaderHome img={route.params.img} bgColor={activeIndex}/>
         <AnimatedColorView
         activeIndex={activeIndex}
         colors={['"rgba(0,0,0,0.0)"', '"rgba(0,0,0,0.5)"']}
