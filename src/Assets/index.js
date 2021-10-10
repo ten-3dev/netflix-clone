@@ -18,6 +18,9 @@ import HomeIcon_f from './Files/home_f.png'
 
 import Post1 from './Files/post1.jpg';
 
+import MoviePost from './Files/moviePost.jpg';
+import MovieTitle from './Files/Title.png';
+
 export {
     LOGO,
     LOGO_2,
@@ -34,4 +37,6 @@ export {
     HomeIcon,
     HomeIcon_f,
     Post1,
+    MoviePost,
+    MovieTitle,
 }
