@@ -30,10 +30,10 @@ const SubBox = styled.View`
     flex-direction: row;
 `;
 const Title = styled.Text`
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 15px;
     color: white;
-    margin-left: 10px;
+    margin-left: 12px;
+    font-family: 'NanumGothic-Bold';
 `;
 
 export {

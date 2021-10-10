@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
 import {View, Text, Image, TouchableOpacity } from "react-native";
-import styled from 'styled-components';
 import { Glasses, LOGO_2 } from "../../Assets";
 import AnimatedColorView from 'react-native-animated-colors';
 import {    

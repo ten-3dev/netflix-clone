@@ -54,6 +54,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>NotoSansKR-Regular.otf</string>
+		<string>NotoSansKRRegular.otf</string>
 	</array>
 </dict>
 </plist>

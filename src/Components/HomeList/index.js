@@ -4,7 +4,7 @@ import { ScrollView } from "react-native-gesture-handler";
 
 const List = (props) => {
 
-    const ListBox = styled.View`
+  const ListBox = styled.View`
     width: 100%;
     height: 230px;
     margin-top: 20px;
@@ -13,12 +13,13 @@ const List = (props) => {
     width: 100%;
     height: 50px;
     padding-left: 10px;
+    justify-content: center;
   `;
   const Title = styled.Text`
-    font-size: 28px;
-    font-weight: bold;
+    font-size: 20px;
     color: white;
     align-items: center;
+    font-family: 'NanumGothic-Bold';
   `;
   const ItemBox = styled.View`
     width: 100%;

@@ -25,7 +25,7 @@ const StackNavigation = (props) => {
                     headerTitle: (props) => ( // App Logo
                     <Image
                         source={LOGO}
-                        style={{width: 130}}
+                        style={{width: 130, height: '100%', transform: [{scale: 1.15}]}}
                         resizeMode="contain"
                     />
                     ),

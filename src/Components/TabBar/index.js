@@ -9,12 +9,12 @@ const TabBar = (props) => {
             source={
                 props.focused ? props.icon : props.icon_f
             }
-            style={{width: 25, height: 25}}
+            style={{width: 20, height: 20}}
         />
         {props.focused ? 
-        <Text style={{color: 'white', fontSize: 10}}>{props.name}</Text> 
+        <Text style={{color: 'white', fontSize: 8, fontFamily: 'NotoSansKRRegular'}}>{props.name}</Text> 
         : 
-        <Text style={{color: 'gray', fontSize: 10}}>{props.name}</Text>
+        <Text style={{color: 'gray', fontSize: 8, fontFamily: 'NotoSansKRRegular'}}>{props.name}</Text>
         }
   </View>
   )

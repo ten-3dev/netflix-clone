@@ -9,22 +9,23 @@ StatusBar.setBackgroundColor("#000");
 const UserItem = (props) => {
     const ItemBox = styled.View`
         width: 110px;
-        height: 135px;
+        height: 145px;
         margin-top: 30px;
     `;
     const Item = styled.TouchableOpacity`
         width: 100%;
-        height: 110px;
+        height: 100%;
         border-radius: 5px;
         flex: 1;
         justify-content: center;
         align-items: center;
-        margin-bottom: 8px;
+        margin-bottom: 0px;
     `;
     const ItemText = styled.Text`
         color: white;
         text-align: center;
-        font-size: 16px;
+        font-size: 12px;
+        font-family: 'NotoSansKRRegular';
     `;
     return(
         <ItemBox>
@@ -56,14 +57,15 @@ const Main = ({navigation}) => {
     `;
     const TextBox = styled.View`
         width: 100%;
-        height: 34px;
-        margin-top: 90px;
+        height: 45px;
+        margin-top: 67px;
     `;
     const Label = styled.Text`
         color: white;
-        font-size: 22px;
+        font-size: 18px;
         text-align: center;
-        font-weight: bold;
+        font-family: 'NotoSansKRRegular';
+        margin-top: 7px;
     `;
     const UserBox = styled.View`
         width: 70%;
@@ -79,10 +81,10 @@ const Main = ({navigation}) => {
             <Label>넷플릭스를 시청할 프로필을 선택하세요.</Label>
         </TextBox>
         <UserBox>
-            <UserItem name="김민재1" img={Profile_img_0} navigation={navigation} />
-            <UserItem name="김민재2" img={Profile_img_1} navigation={navigation} />
-            <UserItem name="김민재3" img={Profile_img_2} navigation={navigation} />
-            <UserItem name="김민재3" img={Profile_img_2} type="add" />
+            <UserItem name="김민재 1" img={Profile_img_0} navigation={navigation} />
+            <UserItem name="김민재 2" img={Profile_img_1} navigation={navigation} />
+            <UserItem name="김민재 3" img={Profile_img_2} navigation={navigation} />
+            <UserItem img={Profile_img_2} type="add" />
         </UserBox>
       </Backgrounds>
   )

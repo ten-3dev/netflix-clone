@@ -1,7 +1,10 @@
 import LOGO from './Files/logo.png';
 import LOGO_2 from './Files/LOGO_2.png';
+
 import Profile_setting from './Files/profile_setting.png';
 import Glasses from './Files/glasses.png';
+import Bell from './Files/bell.png';
+import Right_Arrow from './Files/right_arrow.png';
 
 import Profile_img_0 from './Files/chicken.png';
 import Profile_img_1 from './Files/dog.png';
@@ -20,6 +23,8 @@ export {
     LOGO_2,
     Profile_setting,
     Glasses,
+    Bell,
+    Right_Arrow,
     Profile_img_0,
     Profile_img_1,
     Profile_img_2,

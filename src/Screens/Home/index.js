@@ -27,8 +27,9 @@ const HomePage = ({route}) => {
   const Type = styled.Text`
     color: white;
     margin-top: -100px;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
+    font-family: 'NotoSansKRRegular';
   `;
   const SubFunc = styled.View`
     width: 100%;
@@ -54,18 +55,20 @@ const HomePage = ({route}) => {
     height: 60px;
   `;
   const PlayBtn = styled.TouchableOpacity`
-    width: 80px;
+    width: 90px;
     height: 35px;
     background-color: white;
     border-radius: 3px;
   `;
   const SubText = styled.Text`
-    color: white;
+    color: #B6B6B6;
+    font-family: 'NotoSansKRRegular';
+    font-size: 10px;
   `;
   const PlayText = styled.Text`
     color: black;
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 15px;
+    font-family: 'NanumGothic-Bold';
   `;
   const Channel = styled.View`
     // background-color: 'rgba(0,0,0,0.5)';
@@ -79,7 +82,8 @@ const HomePage = ({route}) => {
   `;
   const ChannelText = styled.Text`
     color: white;
-    font-size: 22px;
+    font-size: 15px;
+    font-family: 'NotoSansKRRegular';
   `;
 
   const titleArr = [
