@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SafeAreaView, Image, TouchableOpacity } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import LinearGradient from 'react-native-linear-gradient';
@@ -7,6 +7,7 @@ import { Add, Info, Play, Post1 } from "../../Assets";
 import AnimatedColorView from 'react-native-animated-colors';
 import { HeaderHome } from '../../Components/Header/index';
 import List from "../../Components/HomeList";
+
 
 const HomePage = ({route}) => {
 

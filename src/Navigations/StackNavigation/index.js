@@ -2,13 +2,9 @@ import React from 'react';
 import { Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-
 import { LOGO, Profile_setting } from '../../Assets/index';
-
 import Main from '../../Components/Main/index';
-
 import Home from '../../Navigations/BottomNavigations/index';
-
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const Stack = createStackNavigator();
@@ -22,7 +18,7 @@ const StackNavigation = (props) => {
                 name="Main"
                 component={Main}
                 options={{ 
-                    headerTitle: (props) => ( // App Logo
+                    headerTitle: () => (
                     <Image
                         source={LOGO}
                         style={{width: 130, height: '100%', transform: [{scale: 1.15}]}}
@@ -36,7 +32,7 @@ const StackNavigation = (props) => {
                         shadowOpacity: 0,
                         borderBottomWidth: 0
                     },
-                    headerRight: (props) => (
+                    headerRight: () => (
                         <TouchableOpacity 
                             style={{
                                 width: 21, 
