@@ -9,6 +9,16 @@ const Background = styled.View`
     justify-content: space-between;
     z-index: 1;
 `;
+const BlackBackground = styled.View`
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: black;
+`;
 const Logo = styled.Image`
     width: 45px;
     height: 45px;
@@ -38,6 +48,7 @@ const Title = styled.Text`
 
 export {
     Background,
+    BlackBackground,
     Logo,
     Profile,
     Glass,

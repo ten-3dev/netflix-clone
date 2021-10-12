@@ -1,16 +1,20 @@
 import React from 'react';
 import { Image } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 import { createStackNavigator } from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import { LOGO, Profile_setting } from '../../Assets/index';
+
 import Main from '../../Components/Main/index';
 import Home from '../../Navigations/BottomNavigations/index';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+
+import { LOGO, Profile_setting } from '../../Assets/index';
+
 
 const Stack = createStackNavigator();
 
 
-const StackNavigation = (props) => {
+const StackNavigation = () => {
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName={'Main'}>

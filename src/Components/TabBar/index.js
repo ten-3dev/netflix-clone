@@ -1,22 +1,24 @@
 import React from 'react';
-import {Text, View, Image} from 'react-native';
+
+import {
+  CenterView,
+  IconImg,
+  IconText
+} from './style';
 
 const TabBar = (props) => {
   return(
-    <View style={{alignItems: 'center', justifyContent: 'center'}}>
-        <Image
+    <CenterView>
+        <IconImg
             resizeMode={'contain'}
-            source={
-                props.focused ? props.icon : props.icon_f
-            }
-            style={{width: 20, height: 20}}
+            source={ props.focused ? props.icon : props.icon_f }
         />
         {props.focused ? 
-        <Text style={{color: 'white', fontSize: 8, fontFamily: 'NotoSansKRRegular'}}>{props.name}</Text> 
+        <IconText color="white">{props.name}</IconText> 
         : 
-        <Text style={{color: 'gray', fontSize: 8, fontFamily: 'NotoSansKRRegular'}}>{props.name}</Text>
+        <IconText>{props.name}</IconText>
         }
-  </View>
+  </CenterView>
   )
 }
 

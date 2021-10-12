@@ -5,6 +5,7 @@ import Profile_setting from './Files/profile_setting.png';
 import Glasses from './Files/glasses.png';
 import Bell from './Files/bell.png';
 import Right_Arrow from './Files/right_arrow.png';
+import SmartSave from './Files/SmartSave.png';
 
 import Profile_img_0 from './Files/chicken.png';
 import Profile_img_1 from './Files/dog.png';
@@ -28,6 +29,7 @@ export {
     Glasses,
     Bell,
     Right_Arrow,
+    SmartSave,
     Profile_img_0,
     Profile_img_1,
     Profile_img_2,

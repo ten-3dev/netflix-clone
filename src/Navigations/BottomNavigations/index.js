@@ -47,6 +47,7 @@ const HomeNavigation = ({route}) => {
         }}} 
       />
       <Tab.Screen 
+        initialParams={{img: route.params.img}}
         name="SavePage" 
         component={SavePage} 
         options={{ tabBarLabelStyle: {fontSize: 12}, tabBarShowLabel: false, tabBarIcon: ({focused}) => {

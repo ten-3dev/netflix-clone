@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
-import {View, Text, Image, TouchableOpacity } from "react-native";
+import React from "react";
+import { TouchableOpacity } from "react-native";
 import { Glasses, LOGO_2 } from "../../Assets";
 import AnimatedColorView from 'react-native-animated-colors';
 import {    
     Background,
+    BlackBackground,
     Logo,
     Profile,
     Glass,
@@ -36,8 +37,24 @@ const HeaderHome = (props) => {
 
 const HeaderExpected = (props) => {
     return(
-        <Background style={{ backgroundColor: 'black'}}>
+        <BlackBackground>
             <Title>공개 예정</Title>
+            <SubBox>
+                <TouchableOpacity>
+                    <Glass source={Glasses}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                    <Profile source={props.img}/>
+                </TouchableOpacity>
+            </SubBox>
+        </BlackBackground>
+    )
+}
+
+const HeaderSave = (props) => {
+    return(
+        <Background>
+            <Title>저장한 콘텐츠 목록</Title>
             <SubBox>
                 <TouchableOpacity>
                     <Glass source={Glasses}/>
@@ -50,4 +67,4 @@ const HeaderExpected = (props) => {
     )
 }
 
-export {HeaderHome, HeaderExpected};
+export {HeaderHome, HeaderExpected, HeaderSave};

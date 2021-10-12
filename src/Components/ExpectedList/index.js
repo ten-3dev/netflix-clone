@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, Text, SafeAreaView } from 'react-native';
+import { View } from 'react-native';
+
 import { Bell, Info, MoviePost, MovieTitle } from '../../Assets';
 
 import {
@@ -26,6 +27,7 @@ const ExpectedList = (props) => {
     const ReverseFunc = (data) => {
         props.DataFunc(data);
     }
+    
     return(
         <View onLayout={(e) => {
             Yarr.push(e.nativeEvent.layout.y);
