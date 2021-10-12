@@ -9,7 +9,7 @@ const HomeNavigation = ({route}) => {
   return(
     <Navi.Navigator>
       <Navi.Screen
-        initialParams={{img: route.params.img}}
+        initialParams={{img: route.params.img, title: route.params.title}}
         name="Save"
         component={Save}
         options={{

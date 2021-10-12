@@ -63,7 +63,26 @@ const ExpectedMovieArr = [
     },
   ]
 
+const SaveArr = [
+  {
+    title: "블레이드 러너",
+    des: "12+ | 518MB"
+  },
+  {
+    title: "블레이드 러너 2",
+    des: "15+ | 748MB"
+  },
+  {
+    title: "블레이드 러너 3",
+    des: "19+ | 1018MB"
+  },
+  {
+    title: "블레이드 러너 4",
+    des: "18+ | 318MB"
+  },
+]
 export {
     titleArr,
-    ExpectedMovieArr
+    ExpectedMovieArr,
+    SaveArr
 }

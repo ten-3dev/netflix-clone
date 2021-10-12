@@ -1,8 +1,11 @@
 import React from 'react';
-import {Text, View, Image} from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import { HeaderSave } from '../../Components/Header';
+import SaveListPage from '../../Components/SaveList';
 
-import { SmartSave } from '../../Assets';
+import { SaveArr } from '../../Data/index';
+
+import { SmartSave, Profile_setting } from '../../Assets';
 
 import {
   CosSafeAreaView,
@@ -10,26 +13,56 @@ import {
   SmartSaveView,
   RemoveView,
   CenterHeight,
-  SmartSaveImg
+  SmartSaveImg,
+  SmartSaveText,
+  RemoveImage,
+  SaveVideoView,
+  SaveVideoHeaderView,
+  SaveVideoHeaderProfileImg,
+  SaveVideoHeaderText
 
 } from './style';
+
+const SaveList = SaveArr.map((data ,key) => (<SaveListPage 
+  title={data.title}
+  des={data.des}
+  key={key}
+  ></SaveListPage>));
 
 const SavePage = ({route}) => {
   return(
     <CosSafeAreaView>
       <HeaderSave img={route.params.img}/>
       <SmartView>
-        <SmartSaveView>
-          <CenterHeight>
-            <SmartSaveImg source={SmartSave}/>
-          </CenterHeight>
-
-        </SmartSaveView>
-        <RemoveView>
-
-        </RemoveView>
+        <TouchableOpacity>
+          <SmartSaveView>
+            <CenterHeight>
+              <SmartSaveImg source={SmartSave}/>
+            </CenterHeight>
+            <CenterHeight>
+              <SmartSaveText>스마트 저장</SmartSaveText>
+            </CenterHeight>
+          </SmartSaveView>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <RemoveView>
+            <CenterHeight>
+              <RemoveImage source={Profile_setting}/>
+            </CenterHeight>
+          </RemoveView>
+        </TouchableOpacity>
       </SmartView>
-      
+      <SaveVideoView>
+        <SaveVideoHeaderView>
+          <CenterHeight>
+            <SaveVideoHeaderProfileImg source={route.params.img}/>
+          </CenterHeight>
+          <CenterHeight>
+            <SaveVideoHeaderText>{route.params.title}</SaveVideoHeaderText>
+          </CenterHeight>
+        </SaveVideoHeaderView>
+        {SaveList}
+      </SaveVideoView>
     </CosSafeAreaView>
   )
 }

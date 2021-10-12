@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const CosSafeAreaView = styled(SafeAreaView)`
     background-color: black;
+    flex;
 `;
 const NoticeBox = styled.TouchableOpacity`
     width: 100%;

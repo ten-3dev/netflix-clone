@@ -13,6 +13,7 @@ import Profile_img_2 from './Files/human.png';
 import Add from './Files/add.png';
 import Info from './Files/info.png';
 import Play from './Files/play.png';
+import Check from './Files/check.png';
 
 import HomeIcon from './Files/home.png';
 import HomeIcon_f from './Files/home_f.png'
@@ -36,6 +37,7 @@ export {
     Add,
     Info,
     Play,
+    Check,
     HomeIcon,
     HomeIcon_f,
     Post1,

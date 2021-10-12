@@ -21,7 +21,7 @@ const UserItem = (props) => {
     return(
         <ItemBox>
             {props.type !== 'add' ? <>
-            <Item onPress={() => props.navigation.navigate('Home', { img: props.img })}>
+            <Item onPress={() => props.navigation.navigate('Home', { img: props.img, title: props.name })}>
                 <ItemProfileImg 
                     source={props.img} 
                     resizeMode="contain" 
