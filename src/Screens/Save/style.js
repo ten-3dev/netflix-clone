@@ -12,6 +12,7 @@ const SmartView = styled.View`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: black;
 `;
 const SmartSaveView = styled.View`
     width: 120px;
@@ -54,6 +55,7 @@ const SaveVideoView = styled.View`
     border-right-width: 0px;
     border: 1px solid rgba(216, 216, 216, .3);
     padding-bottom: 20px;
+    margin-bottom: 20px;
 `;
 const SaveVideoHeaderView = styled.View`
     width: 100%;
@@ -75,6 +77,78 @@ const SaveVideoHeaderText = styled.Text`
     font-size: 16px;
     color: white;
 `;
+const AdView = styled.View`
+    width: 100%;
+    margin-bottom: 30px;
+`;
+const AdViewText = styled.Text`
+    padding-left: 10px;
+    color: ${props => {
+        if(props.type === 'title'){
+            return 'white'
+        }
+        return '#B6B6B6'
+    }};
+    font-size: ${props => {
+        if(props.type === 'title'){
+            return '22px'
+        }
+        return '13px'
+    }};
+    font-family: ${props => {
+        if(props.type === 'title'){
+            return 'NanumGothic-Bold'
+        }
+        return 'NotoSansKRRegular'
+    }};
+    line-height: ${props => {
+        if(props.type === 'title'){
+            return '50px'
+        }
+        return '20px'
+    }};
+`;
+const AdViewBtnBox = styled.View`
+    width: 100%;
+    height: 50px;
+    margin-top: 40px;
+    align-items: center;
+
+`;
+const AdViewBtn = styled.TouchableOpacity`
+    width: 95%;
+    height: 100%;
+    background-color: #2E94FF;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+`;
+const AdViewBtnText = styled.Text`
+    font-size: 13px;
+    color: white;
+    font-family: 'NotoSansKRRegular';
+`;
+const AdViewMoreBtnBox = styled.View`
+    width: 100%;
+    height: 35px;
+    margin-top: 40px;
+    align-items: center;
+`;
+const AdViewMoreBtn = styled.TouchableOpacity`
+    height: 100%;
+    background-color: #2A2A2A;
+    border-radius: 3px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+`;
+const AdViewMoreBtnText = styled.Text`
+    font-size: 14px;
+    color: white;
+    font-family: 'NotoSansKRRegular';
+    line-height: 20px;
+`;
 export {
     CosSafeAreaView,
     SmartView,
@@ -87,5 +161,13 @@ export {
     SaveVideoView,
     SaveVideoHeaderView,
     SaveVideoHeaderProfileImg,
-    SaveVideoHeaderText
+    SaveVideoHeaderText,
+    AdView,
+    AdViewText,
+    AdViewBtnBox,
+    AdViewBtn,
+    AdViewBtnText,
+    AdViewMoreBtnBox,
+    AdViewMoreBtn,
+    AdViewMoreBtnText
 }

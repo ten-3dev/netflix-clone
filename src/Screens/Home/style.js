@@ -10,7 +10,7 @@ const CosSafeAreaView = styled(SafeAreaView)`
 const MainPost = styled(LinearGradient)`
     width: 100%;
     height: 650px;
-    margin-top: -130px;
+    margin-top: -135px;
     z-index: -1;
 `;
 const PostImg = styled.Image`

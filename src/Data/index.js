@@ -80,6 +80,18 @@ const SaveArr = [
     title: "블레이드 러너 4",
     des: "18+ | 318MB"
   },
+  {
+    title: "블레이드 러너 4",
+    des: "18+ | 318MB"
+  },
+  {
+    title: "블레이드 러너 4",
+    des: "18+ | 318MB"
+  },
+  {
+    title: "블레이드 러너 4",
+    des: "18+ | 318MB"
+  },
 ]
 export {
     titleArr,
