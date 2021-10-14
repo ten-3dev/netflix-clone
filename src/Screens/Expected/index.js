@@ -9,7 +9,6 @@ import { Bell, Right_Arrow } from '../../Assets';
 import { ExpectedMovieArr } from '../../Data';
 
 import {
-  CosSafeAreaView,
   NoticeBox,
   ImgAndTextBox,
   CenterBox,
@@ -17,6 +16,8 @@ import {
   NoticeText,
   ArrowImgBox
 } from './style';
+
+import { CosSafeAreaView } from '../../Setting/index';
 
 
 const ExpectedPage = ({route}) => {

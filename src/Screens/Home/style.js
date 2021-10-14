@@ -1,12 +1,6 @@
-import { SafeAreaView } from "react-native";
-
 import LinearGradient from 'react-native-linear-gradient';
 import styled from "styled-components";
 
-const CosSafeAreaView = styled(SafeAreaView)`
-    background-color: black;
-    flex: 1;
-`;
 const MainPost = styled(LinearGradient)`
     width: 100%;
     height: 650px;
@@ -88,7 +82,6 @@ justify-content: space-evenly;
 
 `;
 export {
-    CosSafeAreaView,
     MainPost,
     PostImg,
     Type,

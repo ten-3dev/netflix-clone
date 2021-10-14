@@ -1,11 +1,5 @@
-import { SafeAreaView } from "react-native";
-
 import styled from 'styled-components';
 
-const CosSafeAreaView = styled(SafeAreaView)`
-    background-color: black;
-    flex;
-`;
 const NoticeBox = styled.TouchableOpacity`
     width: 100%;
     height: 45px;
@@ -44,7 +38,6 @@ const ArrowImgBox = styled.View`
 `;
 
 export {
-    CosSafeAreaView,
     NoticeBox,
     ImgAndTextBox,
     CenterBox,

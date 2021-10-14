@@ -15,6 +15,7 @@ const Stack = createStackNavigator();
 
 
 const StackNavigation = () => {
+
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName={'Main'}>

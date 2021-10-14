@@ -1,11 +1,5 @@
-import { SafeAreaView } from "react-native";
-
 import styled from "styled-components";
 
-const CosSafeAreaView = styled(SafeAreaView)`
-    background-color: black;
-    flex: 1;
-`;
 const SmartView = styled.View`
     width: 100%;
     height: 40px;
@@ -150,7 +144,6 @@ const AdViewMoreBtnText = styled.Text`
     line-height: 20px;
 `;
 export {
-    CosSafeAreaView,
     SmartView,
     SmartSaveView,
     RemoveView,

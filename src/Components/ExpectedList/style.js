@@ -16,7 +16,7 @@ const MovieTitleBox = styled.View`
     flex: 3;
     height: 100%;
 `;
-    const MovieTitleImg = styled.Image`
+const MovieTitleImg = styled.Image`
     height: 100%;
     width: 100px;
     margin-left: 20px;

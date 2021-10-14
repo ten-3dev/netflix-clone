@@ -5,22 +5,24 @@ import ExpectedPage from './Expected/index';
 import SavePage from './Save/index';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { View, Image, Text } from 'react-native';
+
 import { HomeIcon, HomeIcon_f } from '../../Assets';
 import TabBar from '../../Components/TabBar';
 
 const Tab = createBottomTabNavigator();
 
 const HomeNavigation = ({route}) => {
+
   return(
     <Tab.Navigator 
       initialRouteName="HomePage" 
       screenOptions={{
         headerShown: false,
         tabBarStyle:{
-          height: 60,
+          height: 56,
           backgroundColor: '#1E1E1E',
           borderTopWidth: 0,
+          paddingTop: 5
         }
       }}
 

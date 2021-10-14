@@ -10,7 +10,6 @@ import { SaveArr } from '../../Data/index';
 import { SmartSave, Profile_setting } from '../../Assets';
 
 import {
-  CosSafeAreaView,
   SmartView,
   SmartSaveView,
   RemoveView,
@@ -32,6 +31,8 @@ import {
   AdViewMoreBtnText
 
 } from './style';
+
+import { CosSafeAreaView } from '../../Setting/index';
 
 const SaveList = SaveArr.map((data ,key) => (<SaveListPage 
   title={data.title}

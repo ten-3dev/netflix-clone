@@ -7,11 +7,11 @@ import List from "../../Components/HomeList";
 
 import AnimatedColorView from 'react-native-animated-colors';
 
+
 import { titleArr } from "../../Data";
 import { Add, Info, Play, Post1 } from "../../Assets";
 
 import {
-  CosSafeAreaView,
   MainPost,
   PostImg,
   Type,
@@ -26,6 +26,9 @@ import {
   PlayBtnChilImg,
   FlexBox
 } from './style';
+
+import { CosSafeAreaView } from '../../Setting/index';
+
 
 const HomePage = ({route}) => {
   const [activeIndex, setindex] = useState(0);

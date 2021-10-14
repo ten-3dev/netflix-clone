@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { StatusBar } from 'react-native';
+
+import changeNavigationBarColor from 'react-native-navigation-bar-color' ; 
 
 import { Add, Profile_img_0, Profile_img_1, Profile_img_2 } from '../../Assets';
 
@@ -45,7 +47,10 @@ const UserItem = (props) => {
 }
 
 const Main = ({navigation}) => {
-  return(
+
+    changeNavigationBarColor("#1E1E1E");
+
+    return(
       <Backgrounds>
         <TextBox>
             <Label>넷플릭스를 시청할 프로필을 선택하세요.</Label>
